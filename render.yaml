@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: telegram-video-bot
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: "8516803747:AAE5ZJ4sDjx3xIXZ91TF1FHQ5ii7tkRQBoc"
+      - key: CHANNEL_ID
+        value: "@testing2958"
